@@ -17,8 +17,9 @@ public class Cantante {
     private int numeroDeConciertos;
     private int numeroDeGiras;
     
+    // se crea metodos get y set
+
     
-    // hola mundo
     
     
     

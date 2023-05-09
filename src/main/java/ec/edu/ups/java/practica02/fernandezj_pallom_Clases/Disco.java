@@ -13,6 +13,8 @@ public class Disco {
     private int codigo;
     private String nombre;
     private int anioDeLanza;
+    
+    // se crea metodos get y set
 
     public Disco() {
     }

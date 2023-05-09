@@ -14,6 +14,8 @@ public class Cancion {
     private String letra;
     private double tiempoEnMinu;
 
+    // se crea metodos get y set
+
     public Cancion() {
     }
 

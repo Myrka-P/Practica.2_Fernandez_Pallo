@@ -9,5 +9,8 @@ package ec.edu.ups.java.practica02.fernandezj_pallom_Clases;
  * @author ESTUDIANTE
  */
 public class Compositor {
+    private int numDeComposicion;
+    private Top
+    
     
 }

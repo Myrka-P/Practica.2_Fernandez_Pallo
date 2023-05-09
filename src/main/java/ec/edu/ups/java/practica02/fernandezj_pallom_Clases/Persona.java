@@ -16,6 +16,8 @@ public abstract class Persona {
     private String Nacionalidad;
     private double salario;
 
+    // se crea metodos get y set
+
     public Persona() {
     }
     

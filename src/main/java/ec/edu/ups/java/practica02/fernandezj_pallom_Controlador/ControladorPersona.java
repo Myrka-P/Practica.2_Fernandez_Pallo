@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ec.edu.ups.java.practica02.fernandezj_pallom_Clases;
+package ec.edu.ups.java.practica02.fernandezj_pallom_Controlador;
 
+import ec.edu.ups.java.practica02.fernandezj_pallom_Clases.Persona;
 import java.util.List;
 
 /**
@@ -34,7 +35,43 @@ public class ControladorPersona implements IControlador {
     
     @Override
     public void create(Persona obj) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (obj instanceof Persona) {
+
+            String cedula = ((Persona) obj).getCedula();
+            for (int i = 0; i < personas.size(); i++) {
+                Persona persona = personas.get(i);
+                if (persona.getCedula().equals(cedula)) {
+                    personas.set(i, (Persona) obj);
+                    break;
+                }
+            }
+
+        }
+
+    }
+
+    @Override
+    public void delete(Object obj) {
+        if (obj instanceof Persona) {
+
+            for (int i = 0; i < personas.size(); i++) {
+                Persona persona = personas.get(i);
+                if (persona.equals((Persona) obj)) {
+                    personas.remove(i);
+                    break;
+                }
+            }
+
+        }
+    }
+
+    @Override
+    public void list() {
+        for(Persona persona : personas){
+            //personas.stream().forEach(p -> System.out.println(p));
+            System.out.println(persona.toString());
+        }
+    }
     }
 
     @Override
